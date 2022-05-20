@@ -1,0 +1,10 @@
+save: '0516'
+n_classes: 1000
+seed: 0
+post_bn_calibration_batch_num: 64
+data_loader_workers_per_gpu: 6
+drop_last: True
+
+imagenet_train_csv: "/home/storage/storage50/disk3/liujiawei/imagenet/train.csv"
+imagenet_val_all_csv: "/home/storage/storage50/disk3/liujiawei/imagenet/valid_crop_resize_png.csv"
+imagenet_val_csv: "/home/storage/storage50/disk3/liujiawei/imagenet/valid_crop_resize_png_part2500.csv"

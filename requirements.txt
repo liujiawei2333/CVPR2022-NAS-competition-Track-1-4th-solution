@@ -1,0 +1,7 @@
+pytorch
+torchvision
+PIL
+pandas
+prefetch_generator
+tensorboardX
+scipy

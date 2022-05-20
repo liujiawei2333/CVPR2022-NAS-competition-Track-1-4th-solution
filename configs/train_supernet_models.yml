@@ -1,0 +1,41 @@
+batch_size: 128
+sandwich_rule: True
+
+grad_clip_value: 1.0
+
+warmup_epochs: 5 # train_supernet.py:5/train_supernet_few_shot.py:0
+epochs: 100 # train_supernet.py:100/train_supernet_few_shot.py:20
+start_epoch: 0
+
+label_smoothing: 0.1
+inplace_distill: True
+
+bn_momentum: 0
+bn_eps: 1e-5
+
+sample_way: random # random / fair,after the experiment,random is better
+
+num_arch_training: 4
+
+########### regularization ################
+# supernet training regularization (the largest network)
+dropout: 0.2
+drop_connect: 0.2
+drop_connect_only_last_two_stages: True
+
+weight_decay_weight: 0.00001
+weight_decay_bn_bias: 0.
+
+## =================== optimizer and scheduler======================== #
+optimizer:
+    method: sgd
+    momentum: 0.9
+    nesterov: True
+
+lr_scheduler:
+    lr_way: warmup_cosine_lr
+
+    base_lr: 0.1
+    clamp_lr_percent: 0.0
+
+resume: ""
