@@ -1,5 +1,7 @@
 ## CVPR2022 NAS competition Track 1 4th solution
 
+The official website of the competition:[CVPR2022 NAS track1](https://aistudio.baidu.com/aistudio/competition/detail/149/0/task-definition)
+
 Brought to you by **We NAS** from **Kaiyu Zhang**,**Jiawei Liu**,**Weitai Hu** from **Du Xiaoman Financial**.
 
 **Team Member**: Weitai Hu (胡伟泰) (**Leader**), Kaiyu Zhang (张凯昱), Jiawei Liu (刘嘉炜)
