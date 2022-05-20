@@ -1,6 +1,6 @@
 ## CVPR2022 NAS competition Track 1 4th solution
 
-Brought to you by **We NAS** from **Kaiyu Zhang**,**Jiawei Liu**,**Weitai Hu**, **Du Xiaoman Financial**
+Brought to you by **We NAS** from **Kaiyu Zhang**,**Jiawei Liu**,**Weitai Hu** from **Du Xiaoman Financial**
 
 **Team Member**: Weitai Hu (胡伟泰) (**Leader**), Kaiyu Zhang (张凯昱), Jiawei Liu (刘嘉炜)
 
