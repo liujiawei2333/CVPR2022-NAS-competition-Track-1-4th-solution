@@ -4,6 +4,8 @@ Brought to you by **We NAS** from **Kaiyu Zhang**,**Jiawei Liu**,**Weitai Hu**, 
 
 **Team Member**: Weitai Hu (胡伟泰) (**Leader**), Kaiyu Zhang (张凯昱), Jiawei Liu (刘嘉炜)
 
+**maintainer**:[liujiawei2333](https://github.com/liujiawei2333)，[nick](https://github.com/nick-zoo)
+
 Please follow [readme.ipynb](https://github.com/MetaLearners/Solution-to-CVPR2021-NAS-competition-Track-1/blob/main/readme.ipynb) to reproduce the results.
 
 Note: All Python files must be run under DistributedDataParallel.
