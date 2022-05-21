@@ -23,10 +23,10 @@ Note: All Python files must be run under DistributedDataParallel.
 
 To improve the ability of supernet in evaluating the performance of subnets, we construct two models for training, following the one-shot way and few shot way respectively. 
 
-- model construction
-  For the one-shot model, we build the architecture of supernet according to the BigNAS. For the few shot model, we extend the number of group for every stage in supernet (each stage in one-shot model only have one group). For each group in the same stage of few shot model, there are different channel numbers in the second convolution layer in the resnet-block. The left of the Figure 1 shows the archtecture of the few shot supernet.
-- model optimization
-  We follow the trainging strategy of BigNAS for the one-shot supernet. For the trainging of few shot supernet, we extend the number of group for every stage from 2 to the maximum (the maximum is the number of channel condidate in every stage). For the supernet with the larger group, its weights inherit from the ones of the supernet with the smaller group. Following the trainging strategy of BigNAS again, we train the few shot model sequentially along with the increase of the number of group. The right of the figue 1 shows the inheriting method.
+- model construction  
+  For the one-shot model, we build the architecture of supernet according to the BigNAS. For the few shot model, we extend the number of group for every stage in supernet (each stage in one-shot model only have one group). For each group in the same stage of few shot model, there are different channel numbers in the second convolution layer in the resnet-block. The left of the Figure 1 shows the architecture of the few shot supernet.
+- model optimization  
+  We follow the training strategy of BigNAS for the one-shot supernet. For the training of few shot supernet, we extend the number of group for every stage from 2 to the maximum (the maximum is the number of channel candidate in every stage). For the supernet with the larger group, its weights inherit from the ones of the supernet with the smaller group. Following the training strategy of BigNAS again, we train the few shot model sequentially along with the increase of the number of group. The right of the figure 1 shows the inheriting method.
 
 ![Figure 1](./figure1_larger.png)
 
@@ -38,7 +38,7 @@ Then, we need to import the necessary modules.
 
 This part is not required, and its purpose is to generate the accuracy of 30 subnets trained standalone. If you don't want to repeat this step, use `./json_file/gt_arch30.json` directly.
 
-In the subsequent training supernet, we will evaluate the accuracy of these 30 subnets and calculate kendall tau  with `./json_file/ gt_arch30. json` in the evaluate stage after each epoch, as a reference to select the best sueprnet model in this stage. Although this coefficient will not match the score coefficient on the competition website, it can serve as a rough screening model.
+In the subsequent training supernet, we will evaluate the accuracy of these 30 subnets and calculate kendall tau  with `./json_file/ gt_arch30. json` in the evaluation stage after each epoch, as a reference to select the best supernet model in this stage. Although this coefficient will not match the score coefficient on the competition website, it can serve as a rough screening model.
 
 The basis of model selection: the model with the later epoch and the largest Kendall tau.
 
