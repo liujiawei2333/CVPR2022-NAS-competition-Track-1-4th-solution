@@ -8,6 +8,16 @@ Brought to you by **We NAS** from **Kaiyu Zhang**,**Jiawei Liu**,**Weitai Hu** f
 
 **maintainer**:[liujiawei2333](https://github.com/liujiawei2333),[nick](https://github.com/nick-zoo)
 
+paper:[Improve Ranking Correlation of Super-net through Training Scheme from
+
+One-shot NAS to Few-shot NAS](https://arxiv.org/abs/2206.05896)
+
+Video:[Improve Ranking Correlation of Super-net through Training Scheme from
+
+One-shot NAS to Few-shot NAS](https://www.bilibili.com/video/BV1Lv4y1g764/?vd_source=24d405767d5821ced75a2f169e110e80)
+
+Poster:![poster](./cvpr_2022_poster.png)
+
 Please follow [readme.ipynb](https://github.com/MetaLearners/Solution-to-CVPR2021-NAS-competition-Track-1/blob/main/readme.ipynb) to reproduce the results.
 
 Note: All Python files must be run under DistributedDataParallel.
