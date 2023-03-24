@@ -2,7 +2,6 @@ import builtins
 import logging
 import sys
 
-from .comm import is_master_process as is_master_proc
 
 def _suppress_print():
     """
@@ -12,40 +11,6 @@ def _suppress_print():
         pass
 
     builtins.print = print_pass
-
-
-def setup_logging(save_path, mode='a'):
-    """
-    Sets up the logging for multiple processes. Only enable the logging for the
-    master process, and suppress logging for the non-master processes.
-    """
-    if is_master_proc():
-        # Enable logging for the master process.
-        logging.root.handlers = []
-    else:
-        # Suppress logging for non-master processes.
-        _suppress_print()
-
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    logger.propagate = False
-    print_plain_formatter = logging.Formatter(
-        "[%(asctime)s]: %(message)s",
-        datefmt="%m/%d %H:%M:%S",
-    )
-    fh_plain_formatter = logging.Formatter("%(message)s")
-
-    if is_master_proc():
-        ch = logging.StreamHandler(stream=sys.stdout)
-        ch.setLevel(logging.DEBUG)
-        ch.setFormatter(print_plain_formatter)
-        logger.addHandler(ch)
-
-    if save_path is not None and is_master_proc():
-        fh = logging.FileHandler(save_path, mode=mode)
-        fh.setLevel(logging.DEBUG)
-        fh.setFormatter(fh_plain_formatter)
-        logger.addHandler(fh)
 
 
 def get_logger(name):
